@@ -1,0 +1,12 @@
+{
+    "name": "${docs.name}",
+    "description": "${docs.description}",
+    "version": "${version}",
+	"logo":"${docs.logo}",
+	"options" : {
+		"linkNatives": true,
+		"attributesEmit": true,
+		"selleck": true,
+		"outdir" : "${docs.outdir}"
+	}
+}

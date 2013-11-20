@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>SecretCode Example</title>
+		<style type="text/css">
+			.key {
+				padding:5px 10px;
+				margin:0 2px;
+				border:1px solid #bbb;
+				border-radius:4px;
+				background:#eee;
+				color:#999;
+			}
+			#output {
+				color:#c00;
+				font-weight:bold;
+				font-size:120%;
+			}
+		</style>
+		<script src="../lib/SecretCode.js"></script>
+	</head>
+	<body>
+		<h1>SecretCode Example</h1>
+		<p>Type the Konami Code:</p>
+		<p class="code">
+			<span class="key">&#8593;</span>
+			<span class="key">&#8593;</span>
+			<span class="key">&#8595;</span>
+			<span class="key">&#8595;</span>
+			<span class="key">&#8592;</span>
+			<span class="key">&#8594;</span>
+			<span class="key">&#8592;</span>
+			<span class="key">&#8594;</span>
+			<span class="key">B</span>
+			<span class="key">A</span>
+		</p>
+		<p id="output"></p>
+		
+		<script>
+		
+			var secret = new SecretCode(SecretCode.KONAMI);
+			var output = document.getElementById("output");
+			
+			// Simple function to clear the timer
+			var clearId;
+			var clearOutput = function()
+			{
+				if (clearId) clearTimeout(clearId);
+				clearId = setTimeout(function(){
+					output.innerHTML = "";
+					clearId = null;
+				}, 3000);
+			};
+			
+			// Add handlers for when the code is entered
+			secret.on('success', function(){
+				output.innerHTML = "Code Entered Successfully!";
+				clearOutput();
+			})
+			// The code failed to match 
+			.on('failed', function(){
+				output.innerHTML = "Failed";
+				clearOutput();
+			})
+			// The code timed out
+			.on('timeout', function(){
+				output.innerHTML = "Timed-out";
+				clearOutput();
+			});
+			
+		</script>
+	</body>
+</html>

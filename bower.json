@@ -1,0 +1,15 @@
+{
+  "name": "SecretCode",
+  "version": "1.0.0",
+  "main": "lib/SecretCode.min.js",
+  "ignore": [
+    ".gitignore",
+    "build.xml",
+    "build.properties",
+    "docs.json",
+    "README.md",
+    "LICENSE",
+    "src",
+    "src.order"
+  ]
+}

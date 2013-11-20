@@ -55,19 +55,19 @@
 			};
 			
 			// Add handlers for when the code is entered
-			secret.on('success', function(){
-				output.innerHTML = "Code Entered Successfully!";
-				clearOutput();
-			})
-			// The code failed to match 
-			.on('failed', function(){
-				output.innerHTML = "Failed";
-				clearOutput();
-			})
-			// The code timed out
-			.on('timeout', function(){
-				output.innerHTML = "Timed-out";
-				clearOutput();
+			secret.on({
+				success : function(){
+					output.innerHTML = "Code Entered Successfully!";
+					clearOutput();
+				},
+				failed : function(){
+					output.innerHTML = "Failed";
+					clearOutput();
+				},
+				timeout : function(){
+					output.innerHTML = "Timed-out";
+					clearOutput();
+				}
 			});
 			
 		</script>

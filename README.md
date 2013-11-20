@@ -1,6 +1,6 @@
 #SecretCode
 
-This small JavaScript utility is designed for creating secret keyboard codes to be entered on a page or website. For instance, triggering something with the Konami Code.
+This small JavaScript utility is designed for creating secret keyboard codes to be entered on a website. For instance, when the user enters the Konami Code, they could get a hidden easter egg.
 
 ##Installation
 

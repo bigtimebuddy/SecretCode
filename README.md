@@ -117,7 +117,7 @@ Destroy the object and remove all references and does any internal cleanup. Don'
 
 ###Properties
 
-* __SecretCode.KONAMI__ *Array* - Built-in code. A colleciton of keyboard codes matching: up, up, down, down, left, right, left, right, B, A.
+* __SecretCode.KONAMI__ *Array* - Built-in code. A collection of keyboard codes matching: up, up, down, down, left, right, left, right, B, A.
 
 ##Rebuilding
 
